@@ -76,6 +76,53 @@ console.log(arr1);
 console.log(arr2);
 
 
+// spread operator ...
+// 1. Copying Arrays & Objects (Avoiding Mutations)
+
+const arr11 = [1,2,3];
+const arr22 = [...arr11];
+arr22.push(6);
+console.log({arr11});
+// console.log("arr11",arr11);
+console.log({arr22});
+
+
+const obj11 = { name: "Alice", age: 25 };
+const obj22 = { ...obj11 }; 
+obj22.age=99;
+console.log(obj11);
+console.log(obj22);
+
+
+// 2. Merging Arrays & Objects
+const arr111 = [1, 2, "razan"];
+const arr222 = [1, 2, 3];
+
+const arr333= [...arr111,...arr222];
+console.log(arr333);
+
+
+const user = { username: "John", age: 30 };
+const details = { username:"Razan", country: "USA", gender: "Male" };
+const empDetails = {...user,...details}
+console.log(empDetails);
+
+
+// 3. Adding Elements to Arrays Easily
+const arr = [1, 2, 3];
+const newArr = [0, ...arr, 4];
+console.log(newArr);
+
+
+// 4. Converting Strings to Arrays
+const str = "Hello";
+const charArray = [...str];
+console.log(charArray);
+
+
+
+
+
 
 
 
