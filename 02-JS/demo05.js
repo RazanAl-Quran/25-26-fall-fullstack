@@ -84,11 +84,13 @@ fetch("https://digimon-api.vercel.app/api/digimon")
     .then((allDigimons) => {
         return allDigimons.json();
     }).then((parsedDigimon)=>{
-        console.log(parsedDigimon);      
-    })
+        console.log(parsedDigimon)     
+    }).catch(error=>{
+        console.log(error);
+        
+    });
 
 console.log('after');
-
 
 
 // async/await 
